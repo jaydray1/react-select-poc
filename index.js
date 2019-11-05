@@ -35,9 +35,9 @@ class App extends Component {
       <div style={{width: '100%'}}>
         <Hello name={this.state.name} />
         <div style={{width: '100%', display: 'flex', flexDirection: 'coloumn', justifyContent: 'space-around'}}>
-          <Select options={this.month} className="selectors"/>
-          <Select options={this.day} className="selectors"/>
-          <Select options={this.year} className="selectors"/>
+          <Select options={this.month} className="selectors" inputProps={{readOnly:true}}/>
+          <Select options={this.day} className="selectors" inputProps={{readOnly:true}}/>
+          <Select options={this.year} className="selectors" inputProps={{readOnly:true}}/>
         </div>
         <div style={{width: '120px', marginTop: '5em'}}>
         <input list="browsers" name="browser"/>
