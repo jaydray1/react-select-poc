@@ -25,6 +25,15 @@ class App extends Component {
         <div style={{width: '120px'}}>
           <Select options={this.options} />
         </div>
+        <div style={{width: '120px'}}>
+        <input list="browsers" name="browser"/>
+        <datalist id="browsers">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+        </datalist>
+        </div>
       </div>
     );
   }
