@@ -12,20 +12,34 @@ class App extends Component {
     };
   }
 
-   options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' }
+   month = [
+  { value: '01', label: '01' },
+  { value: '01', label: '02' },
+  { value: '03', label: '03' }
+]
+
+  day = [
+  { value: '01', label: '01' },
+  { value: '01', label: '02' },
+  { value: '03', label: '03' }
+]
+
+  year = [
+  { value: '1990', label: '1990' },
+  { value: '1991', label: '1991' },
+  { value: '1992', label: '1992' }
 ]
 
   render() {
     return (
-      <div>
+      <div style={{width: '100%'}}>
         <Hello name={this.state.name} />
-        <div style={{width: '120px'}}>
-          <Select options={this.options} />
+        <div style={{width: '100%', display: 'flex', flexDirection: 'coloumn', justifyContent: 'space-around'}}>
+          <Select options={this.month} className="selectors"/>
+          <Select options={this.day} className="selectors"/>
+          <Select options={this.year} className="selectors"/>
         </div>
-        <div style={{width: '120px'}}>
+        <div style={{width: '120px', marginTop: '5em'}}>
         <input list="browsers" name="browser"/>
         <datalist id="browsers">
             <option value="volvo">Volvo</option>

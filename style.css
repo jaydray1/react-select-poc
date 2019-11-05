@@ -17,3 +17,7 @@ h1, p {
 input::-webkit-calendar-picker-indicator {
   display: none;
 }
+
+.selectors {
+  width: 30%;
+}
