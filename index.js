@@ -67,8 +67,8 @@ getString = (arr) => {
       <div style={{width: '100%'}}>
         <Hello name={this.state.name} />
         <div style={{width: '100%', display: 'flex', flexDirection: 'coloumn', justifyContent: 'space-around'}}>
-          <Select options={this.months} className="selectors" isSearchable={ this.checker ? false : true }/>
-          <Select options={this.genNum(1, 31)} className="selectors" isSearchable={ this.checker ? false : true }/>
+          <Select options={this.months} className="selectors" isSearchable={ !this.checker ? false : true }/>
+          <Select options={this.genNum(1, 31)} className="selectors" isSearchable={ !this.checker ? false : true }/>
           <Select options={this.genNum(1930, this.highYear)} className="selectors" isSearchable={ !this.checker ? false : true }/>
         </div>
         <div style={{width: '120px', marginTop: '5em'}}>
