@@ -28,6 +28,13 @@ class App extends Component {
     {value: '12', label: 'December'}
   ]
 
+  isMobile = () => {
+  const w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || w < 768) {
+    return true;
+  }
+};
+
 genNum = (low, high) => {
   var arr = [];
   while(low <= high){
@@ -56,7 +63,7 @@ getString = (arr) => {
       <div style={{width: '100%'}}>
         <Hello name={this.state.name} />
         <div style={{width: '100%', display: 'flex', flexDirection: 'coloumn', justifyContent: 'space-around'}}>
-          <Select options={this.genNum(1, 12)} className="selectors" inputProps={{readOnly:true}} isSearchable={ false }/>
+          <Select options={this.months} className="selectors" inputProps={{readOnly: this.isMobile ? false : true}} isSearchable={ this.isMobile ? false : true }/>
           <Select options={this.genNum(1, 31)} className="selectors" inputProps={{readOnly:true}} isSearchable={ false }/>
           <Select options={this.genNum(1930, this.highYear)} className="selectors" inputProps={{readOnly:true}} isSearchable={ false }/>
         </div>
