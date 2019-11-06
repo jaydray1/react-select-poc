@@ -57,7 +57,7 @@ getString = (arr) => {
     }
     optionsObject.value = el;
     optionsObject.label = el;
-    thisArray.push(optionsObject)
+    return thisArray.push(optionsObject)
   })
   return thisArray;
 }
